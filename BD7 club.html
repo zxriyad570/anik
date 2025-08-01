@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BD7 Club Login</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #1c1c1c, #292929);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    img.banner {
+      width: 300px;
+      height: auto;
+      margin-top: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+      animation: popIn 1.2s ease-in-out;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .login-box {
+      background: #2c2c2c;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      margin-top: 30px;
+      animation: slideUp 1s ease-in-out;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .round-label {
+      display: inline-block;
+      background: #00bfff;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,191,255, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(0,191,255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,191,255, 0); }
+    }
+
+    input {
+      width: 80%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    button {
+      background: #00bfff;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #009acd;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner Image -->
+  <img class="banner" src="https://via.placeholder.com/300x150.png?text=BD7+CLUB+VIP" alt="BD7 Club VIP Banner" />
+
+  <!-- Login Section -->
+  <div class="login-box">
+    <div class="round-label">💠ANIK web page💠</div>
+    <br>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <br>
+    <button onclick="checkLogin()">Access</button>
+  </div>
+
+  <footer>© BD7 CLUB VIP —Real page</footer>
+
+  <script>
+    function checkLogin() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if(user === "bd7lederanik" && pass === "bd7owneranik") {
+        window.location.href = "https://dkwin9.com/#/register?invitationCode=36171118673";
+      } else {
+        alert("Incorrect username or password!");
+      }
+    }
+  </script>
+</body>
+</html>
